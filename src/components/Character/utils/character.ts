@@ -3,6 +3,8 @@ import { DRACOLoader, GLTF, GLTFLoader } from "three-stdlib";
 import { setCharTimeline, setAllTimeline } from "../../utils/GsapScroll";
 import { decryptFile } from "./decrypt";
 
+import { customizeHeroCharacter } from "./heroCustomization";
+
 const setCharacter = (
   renderer: THREE.WebGLRenderer,
   scene: THREE.Scene,
@@ -36,11 +38,14 @@ const setCharacter = (
                 mesh.frustumCulled = true;
               }
             });
+            customizeHeroCharacter(character);
             resolve(gltf);
             setCharTimeline(character, camera);
             setAllTimeline();
-            character!.getObjectByName("footR")!.position.y = 3.36;
-            character!.getObjectByName("footL")!.position.y = 3.36;
+            const footR = character?.getObjectByName("footR");
+            if (footR) footR.position.y = 3.36;
+            const footL = character?.getObjectByName("footL");
+            if (footL) footL.position.y = 3.36;
             dracoLoader.dispose();
           },
           undefined,

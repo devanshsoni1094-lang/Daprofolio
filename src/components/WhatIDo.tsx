@@ -7,6 +7,7 @@ const WhatIDo = () => {
   const setRef = (el: HTMLDivElement | null, index: number) => {
     containerRef.current[index] = el;
   };
+
   useEffect(() => {
     if (ScrollTrigger.isTouch) {
       containerRef.current.forEach((container) => {
@@ -24,8 +25,9 @@ const WhatIDo = () => {
       });
     };
   }, []);
+
   return (
-    <div className="whatIDO">
+    <div className="whatIDO" id="what-i-do">
       <div className="what-box">
         <h2 className="title">
           W<span className="hat-h2">HAT</span>
@@ -58,6 +60,8 @@ const WhatIDo = () => {
               />
             </svg>
           </div>
+
+          {/* 1. ANALYZE & SQL */}
           <div
             className="what-content what-noTouch"
             ref={(el) => setRef(el, 0)}
@@ -87,28 +91,26 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
-              <h4>Description</h4>
+              <h3>ANALYZE & SQL</h3>
+              <h4>Data Analysis & MySQL Databases</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                Extracting actionable business insights from 50K+ transactional records using MySQL queries, aggregations, joins, date-time functions, and performance indexing.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+                <div className="what-tags">MySQL</div>
+                <div className="what-tags">SQL Joins</div>
+                <div className="what-tags">Subqueries</div>
+                <div className="what-tags">Aggregations</div>
+                <div className="what-tags">Date & Time Functions</div>
+                <div className="what-tags">Indexing</div>
+                <div className="what-tags">MongoDB</div>
               </div>
               <div className="what-arrow"></div>
             </div>
           </div>
+
+          {/* 2. BI & DASHBOARDING */}
           <div
             className="what-content what-noTouch"
             ref={(el) => setRef(el, 1)}
@@ -128,26 +130,100 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>DESIGN</h3>
-              <h4>Description</h4>
+              <h3>BI & DASHBOARDING</h3>
+              <h4>Power BI & Business Intelligence</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
+                Developing interactive Power BI dashboards, authoring custom DAX measures, dynamic KPI cards, and building relational data models for performance tracking.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+                <div className="what-tags">Power BI</div>
+                <div className="what-tags">DAX</div>
+                <div className="what-tags">Data Modeling</div>
+                <div className="what-tags">KPI Cards</div>
+                <div className="what-tags">Interactive Visuals</div>
+                <div className="what-tags">Branch Analytics</div>
               </div>
               <div className="what-arrow"></div>
             </div>
           </div>
+
+          {/* 3. EXCEL & SPREADSHEETS */}
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 2)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+            <div className="what-content-in">
+              <h3>EXCEL & SPREADSHEETS</h3>
+              <h4>Advanced Excel & Pivot Analysis</h4>
+              <p>
+                Data cleaning, sanitization, and structured analysis using Excel Pivot Tables, dynamic lookup functions, data validation, and executive summary dashboards.
+              </p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">Advanced Excel</div>
+                <div className="what-tags">Pivot Tables</div>
+                <div className="what-tags">Lookup Functions</div>
+                <div className="what-tags">Data Cleaning</div>
+                <div className="what-tags">Executive Dashboards</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+
+          {/* 4. PYTHON & STATISTICS */}
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 3)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+            <div className="what-content-in">
+              <h3>PYTHON & STATISTICS</h3>
+              <h4>Data Science & Analytics</h4>
+              <p>
+                Performing exploratory data analysis (EDA), array manipulation, statistical visualization, probability distributions, hypothesis testing, and correlation analysis.
+              </p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">Python</div>
+                <div className="what-tags">Pandas</div>
+                <div className="what-tags">NumPy</div>
+                <div className="what-tags">Matplotlib</div>
+                <div className="what-tags">Seaborn</div>
+                <div className="what-tags">Hypothesis Testing</div>
+                <div className="what-tags">Correlation</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -163,7 +239,7 @@ function handleClick(container: HTMLDivElement) {
     const siblings = Array.from(container.parentElement.children);
 
     siblings.forEach((sibling) => {
-      if (sibling !== container) {
+      if (sibling !== container && sibling.classList.contains("what-content")) {
         sibling.classList.remove("what-content-active");
         sibling.classList.toggle("what-sibling");
       }

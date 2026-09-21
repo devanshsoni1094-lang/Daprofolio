@@ -45,9 +45,6 @@ const Loading = ({ percent }: { percent: number }) => {
   return (
     <>
       <div className="loading-header">
-        <a href="/#" className="loader-title" data-cursor="disable">
-          Logo
-        </a>
         <div className={`loaderGame ${clicked && "loader-out"}`}>
           <div className="loaderGame-container">
             <div className="loaderGame-in">
@@ -61,9 +58,19 @@ const Loading = ({ percent }: { percent: number }) => {
       </div>
       <div className="loading-screen">
         <div className="loading-marquee">
-          <Marquee>
-            <span> A Creative Developer</span> <span>A Creative Designer</span>
-            <span> A Creative Developer</span> <span>A Creative Designer</span>
+          <Marquee speed={65} gradient={false}>
+            <span className="marquee-word">ANALYZE</span>
+            <span className="marquee-dot">•</span>
+            <span className="marquee-word">MEASURE</span>
+            <span className="marquee-dot">•</span>
+            <span className="marquee-word">EXECUTE</span>
+            <span className="marquee-dot">•</span>
+            <span className="marquee-word">ANALYZE</span>
+            <span className="marquee-dot">•</span>
+            <span className="marquee-word">MEASURE</span>
+            <span className="marquee-dot">•</span>
+            <span className="marquee-word">EXECUTE</span>
+            <span className="marquee-dot">•</span>
           </Marquee>
         </div>
         <div
@@ -108,7 +115,7 @@ export const setProgress = (setLoading: (value: number) => void) => {
         if (percent > 91) {
           clearInterval(interval);
         }
-      }, 2000);
+      }, 200);
     }
   }, 100);
 
@@ -117,19 +124,36 @@ export const setProgress = (setLoading: (value: number) => void) => {
     setLoading(100);
   }
 
+  let isResolving = false;
   function loaded() {
     return new Promise<number>((resolve) => {
+      if (isResolving) return;
+      isResolving = true;
       clearInterval(interval);
       interval = setInterval(() => {
         if (percent < 100) {
-          percent++;
+          percent += 2;
+          if (percent > 100) percent = 100;
           setLoading(percent);
         } else {
           resolve(percent);
           clearInterval(interval);
         }
-      }, 2);
+      }, 10);
     });
   }
-  return { loaded, percent, clear };
+
+  // Safety fallback: auto-complete after 4.5s so user is never permanently stuck
+  const safetyTimer = setTimeout(() => {
+    loaded();
+  }, 4500);
+
+  return { 
+    loaded: () => {
+      clearTimeout(safetyTimer);
+      return loaded();
+    }, 
+    percent, 
+    clear 
+  };
 };

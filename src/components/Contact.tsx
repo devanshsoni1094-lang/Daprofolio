@@ -1,7 +1,10 @@
 import { MdArrowOutward, MdCopyright } from "react-icons/md";
 import "./styles/Contact.css";
+import { portfolioData } from "../data/portfolioData";
 
 const Contact = () => {
+  const { profile } = portfolioData;
+
   return (
     <div className="contact-section section-container" id="contact">
       <div className="contact-container">
@@ -10,46 +13,41 @@ const Contact = () => {
           <div className="contact-box">
             <h4>Email</h4>
             <p>
-              <a href="mailto:example@mail.com" data-cursor="disable">
-                example@mail.com
+              <a href={`mailto:${profile.contact.email}`} data-cursor="disable">
+                {profile.contact.email}
               </a>
             </p>
             <h4>Phone</h4>
             <p>
-              <a href="tel:+9199999999" data-cursor="disable">
-                +91 99999 99999
+              <a href={`tel:${profile.contact.phone}`} data-cursor="disable">
+                {profile.contact.phone}
               </a>
             </p>
           </div>
           <div className="contact-box">
-            <h4>Social</h4>
+            <h4>Social & Profiles</h4>
             <a
-              href="https://github.com"
+              href={profile.contact.linkedin}
               target="_blank"
+              rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
-              Github <MdArrowOutward />
+              LinkedIn <MdArrowOutward />
             </a>
             <a
-              href="https://www.linkedin.com"
+              href={profile.contact.github}
               target="_blank"
+              rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
-              Linkedin <MdArrowOutward />
+              GitHub <MdArrowOutward />
             </a>
             <a
-              href="https://x.com"
+              href={profile.contact.instagram}
               target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Twitter <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
+              rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
@@ -58,10 +56,10 @@ const Contact = () => {
           </div>
           <div className="contact-box">
             <h2>
-              Designed and Developed <br /> by <span>Moncy Yohannan</span>
+              Redesigned by <span>{profile.name}</span>
             </h2>
             <h5>
-              <MdCopyright /> 2024
+              <MdCopyright /> 2026
             </h5>
           </div>
         </div>

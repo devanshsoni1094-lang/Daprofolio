@@ -73,6 +73,13 @@ const Scene = () => {
             handleResize(renderer, camera, canvasDiv, character)
           );
         }
+      }).catch((err) => {
+        console.error("Error loading character model:", err);
+        progress.loaded().then(() => {
+          setTimeout(() => {
+            light.turnOnLights();
+          }, 1000);
+        });
       });
 
       let mouse = { x: 0, y: 0 },
