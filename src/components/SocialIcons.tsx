@@ -81,7 +81,13 @@ const SocialIcons = () => {
           </a>
         </span>
       </div>
-      <a className="resume-button" href={`mailto:${portfolioData.profile.contact.email}?subject=Requesting%20Resume%20-%20Devansh%20Soni`}>
+      <a
+        className="resume-button"
+        href={portfolioData.profile.resumePdf}
+        target="_blank"
+        rel="noreferrer"
+        title="Download / View Resume"
+      >
         <HoverLinks text="RESUME" />
         <span>
           <TbNotes />

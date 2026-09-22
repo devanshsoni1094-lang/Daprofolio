@@ -45,7 +45,9 @@ export const Home: React.FC = () => {
               </Link>
 
               <a
-                href={`mailto:${profile.contact.email}`}
+                href={profile.resumePdf}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-2.5 px-7 py-4 text-base font-extrabold font-heading text-darkText bg-white hover:bg-sunflower/40 rounded-2xl border-3 border-darkText shadow-[5px_5px_0px_#1A1A1A] transition-all"
               >
                 <FileText className="w-5 h-5 text-crimson" />

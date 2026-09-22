@@ -81,7 +81,7 @@ export const portfolioData = {
       minor: "Computer Science",
       ambition: "Long-term focus on Data Science and Machine Learning."
     },
-    resumePdf: "/resume.pdf",
+    resumePdf: "https://drive.google.com/file/d/11-XEVQAozm7UxUHZtmPK2zBV6e6bNw6C/view?usp=drive_link",
     contact: {
       phone: "+91-7737378928",
       email: "devanshsoni1094@gmail.com",
