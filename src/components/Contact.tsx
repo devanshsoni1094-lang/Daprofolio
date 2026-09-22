@@ -56,7 +56,7 @@ const Contact = () => {
           </div>
           <div className="contact-box">
             <h2>
-              Redesigned by <span>{profile.name}</span>
+              <span>{profile.name}</span>
             </h2>
             <h5>
               <MdCopyright /> 2026
