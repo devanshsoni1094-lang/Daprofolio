@@ -147,7 +147,7 @@ export const portfolioData = {
       period: "Mar 2026 – Apr 2026",
       badges: ["Python", "Pandas", "Excel", "Trading Analytics", "Textile Industry"],
       bullets: [
-        "Analyzed approximately 20K rows of trading company data using Python and Excel to evaluate transaction patterns and business performance for a textile trading company.",
+        "Analyzed approximately 20K rows of trading company data using Python and Excel to evaluate transaction patterns and business performance.",
         "Cleaned and organized raw trading data using Python and Pandas to prepare structured datasets for analysis.",
         "Performed exploratory analysis across key trading and transaction dimensions to identify patterns and performance trends.",
         "Created summary reports and visualizations to communicate insights from the analyzed trading data."
