@@ -25,9 +25,12 @@
   color: var(--accentColor);
 }
 
-.work-single-wrapper {
+.work-projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   width: 100%;
-  max-width: 950px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -174,8 +177,17 @@
   transition: background 0.3s ease;
 }
 
+.work-live-button {
+  background: linear-gradient(135deg, rgba(168, 124, 255, 0.3), rgba(0, 240, 255, 0.4));
+  border-color: rgba(168, 124, 255, 0.5);
+}
+
 .work-single-card:hover .work-github-button {
   background: linear-gradient(135deg, rgba(0, 240, 255, 0.35), rgba(168, 124, 255, 0.45));
+}
+
+.work-single-card:hover .work-live-button {
+  background: linear-gradient(135deg, rgba(168, 124, 255, 0.45), rgba(0, 240, 255, 0.55));
 }
 
 @media only screen and (max-width: 900px) {
