@@ -93,7 +93,7 @@ const Career = () => {
             </div>
             <div>
               <p style={{ width: "100%", marginBottom: "10px", lineHeight: "1.6" }}>
-                Analyzed approximately 20K rows of trading company data using Python and Excel to evaluate transaction patterns and business performance for a textile trading company.
+                Analyzed approximately 50K rows of pizza sales data using Excel and MySQL to answer assigned sales and performance questions.
               </p>
               <ul style={{ margin: "0", paddingLeft: "18px", color: "rgba(255, 255, 255, 0.75)", fontSize: "15px", lineHeight: "1.7" }}>
                 {experiences[0].bullets.map((bullet, idx) => (

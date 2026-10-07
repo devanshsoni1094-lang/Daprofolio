@@ -145,12 +145,12 @@ export const portfolioData = {
       role: "Data Analyst Intern",
       company: "Codec Technologies",
       period: "Mar 2026 – Apr 2026",
-      badges: ["Python", "Pandas", "Excel", "Trading Analytics", "Textile Industry"],
+      badges: ["MySQL", "Excel", "Pivot Tables", "Sales Analysis", "KPIs"],
       bullets: [
-        "Analyzed approximately 20K rows of trading company data using Python and Excel to evaluate transaction patterns and business performance for a textile trading company.",
-        "Cleaned and organized raw trading data using Python and Pandas to prepare structured datasets for analysis.",
-        "Performed exploratory analysis across key trading and transaction dimensions to identify patterns and performance trends.",
-        "Created summary reports and visualizations to communicate insights from the analyzed trading data."
+        "Analyzed approximately 50K rows of pizza sales data using Excel and MySQL to answer assigned sales and performance questions.",
+        "Cleaned and organized raw sales data in Excel and used Pivot Tables to summarize sales performance across product categories and key dimensions.",
+        "Wrote MySQL queries using filtering, grouping, aggregations, and date and time functions to analyze transactional sales data.",
+        "Built an Excel dashboard to present key sales metrics, trends, and product-level performance."
       ],
       artifacts: ["Offer Letter", "Completion Certificate"]
     },
@@ -197,30 +197,29 @@ export const portfolioData = {
       }
     },
     {
-      id: "textile-trading",
-      title: "Textile Trading Transaction Analysis",
-      tools: "Python + Pandas + Excel",
-      datasetSize: "20,000+ Records",
-      description: "Exploratory data analysis and transaction pattern evaluation of approximately 20,000 rows of trading data for a textile company.",
-      githubLink: "https://github.com/devanshsoni1094-lang",
+      id: "pizza-sales",
+      title: "Pizza Sales Performance Analysis",
+      tools: "MySQL + Excel",
+      datasetSize: "50,000+ Records",
+      description: "Comprehensive end-to-end analysis of a 50K+ record pizza sales dataset to derive executive sales metrics, data modeling, and transactional insights.",
+      githubLink: "https://github.com/devanshsoni1094-lang/pizza-sales-data-analysis",
       calculatedMetrics: [
-        "20K Trading Rows Analyzed",
-        "Pandas Data Cleaning",
-        "Pattern Identification",
-        "Visual Summaries"
+        "Total Revenue",
+        "Total Orders",
+        "Average Order Value (AOV)",
+        "Average Pizzas per Order"
       ],
       breakdowns: [
-        "Analyzed approximately 20K rows of trading company data using Python and Excel to evaluate transaction patterns and business performance for a textile trading company",
-        "Cleaned and organized raw trading data using Python and Pandas to prepare structured datasets for analysis",
-        "Performed exploratory analysis across key trading and transaction dimensions to identify patterns and performance trends",
-        "Created summary reports and visualizations to communicate insights from the analyzed trading data"
+        "Revenue contribution across pizza categories and sizes to evaluate product mix",
+        "Daily and hourly order patterns using MySQL date and time functions to identify peak sales volume",
+        "Ranked top and bottom 5 pizzas by quantity sold to evaluate product-level performance"
       ],
       details: {
-        problem: "Evaluate transaction patterns and business performance across 20,000 rows of trading data for a textile company.",
-        data: "20K rows of trading transactional data with order dates, quantities, product categories, and transaction amounts.",
-        cleaning: "Cleaned and sanitized raw trading data using Python and Pandas.",
-        analysis: "Performed exploratory data analysis and summary aggregation across key transaction dimensions.",
-        outcome: "Generated summary reports and visualizations communicating key business trends and transaction insights."
+        problem: "Analyze transactional pizza sales data to evaluate revenue metrics, identify sales peaks, and evaluate product-level profitability.",
+        data: "50K+ rows of sales records with order dates, times, pizza categories, sizes, prices, and quantities.",
+        cleaning: "Cleaned and sanitized raw transactional data in Excel, eliminated redundancies, and verified data integrity.",
+        analysis: "Wrote structured MySQL queries leveraging filtering, grouping, date/time functions, and aggregations. Summarized dimensions using Excel Pivot Tables.",
+        outcome: "Constructed an interactive Excel dashboard providing key revenue metrics, temporal trends, and top/bottom selling SKU rankings."
       }
     }
   ] as ProjectData[],
