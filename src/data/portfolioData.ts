@@ -145,12 +145,12 @@ export const portfolioData = {
       role: "Data Analyst Intern",
       company: "Codec Technologies",
       period: "Mar 2026 – Apr 2026",
-      badges: ["MySQL", "Excel", "Pivot Tables", "Sales Analysis", "KPIs"],
+      badges: ["Python", "Pandas", "Excel", "Trading Analytics", "Textile Industry"],
       bullets: [
-        "Analyzed approximately 50K rows of pizza sales data using Excel and MySQL to answer assigned sales and performance questions.",
-        "Cleaned and organized raw sales data in Excel and used Pivot Tables to summarize sales performance across product categories and key dimensions.",
-        "Wrote MySQL queries using filtering, grouping, aggregations, and date and time functions to analyze transactional sales data.",
-        "Built an Excel dashboard to present key sales metrics, trends, and product-level performance."
+        "Analyzed approximately 20K rows of trading company data using Python and Excel to evaluate transaction patterns and business performance for a textile trading company.",
+        "Cleaned and organized raw trading data using Python and Pandas to prepare structured datasets for analysis.",
+        "Performed exploratory analysis across key trading and transaction dimensions to identify patterns and performance trends.",
+        "Created summary reports and visualizations to communicate insights from the analyzed trading data."
       ],
       artifacts: ["Offer Letter", "Completion Certificate"]
     },

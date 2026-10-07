@@ -64,7 +64,7 @@ export const Projects: React.FC = () => {
 
             {/* Action Button */}
             <div className="pt-4 border-t-2 border-darkText flex items-center justify-between">
-              <span className="text-xs font-mono font-bold text-darkText/70">50,000+ Sales Records</span>
+              <span className="text-xs font-mono font-bold text-darkText/70">{proj.datasetSize}</span>
               <button
                 onClick={() => setSelectedProject(proj)}
                 className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-extrabold font-heading text-white bg-crimson hover:bg-crimson-hover rounded-xl border-2 border-darkText shadow-[3px_3px_0px_#1A1A1A] transition-all"
