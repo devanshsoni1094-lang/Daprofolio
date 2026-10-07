@@ -82,7 +82,7 @@ export const portfolioData = {
       minor: "Computer Science",
       ambition: "Long-term focus on Data Engineering, Data Science, and Machine Learning."
     },
-    resumePdf: "https://drive.google.com/file/d/1MNI1BkXowYHAlMc-sHbyCrF15X9AmFDJ/view?usp=drive_link",
+    resumePdf: "https://drive.google.com/file/d/19hdtZC94mzc4Z2Ab7gUz6PdlII3bSB_0/view?usp=drive_link",
     contact: {
       phone: "+91-7737378928",
       email: "devanshsoni1094@gmail.com",
