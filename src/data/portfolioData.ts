@@ -63,10 +63,10 @@ export interface CertificationItem {
 export const portfolioData = {
   profile: {
     name: "Devansh Soni",
-    title: "Data Analyst · Aspiring Data Scientist",
-    tagline: "I turn complex raw data into clear business decisions — leveraging SQL, Excel, Power BI & Python to uncover stories across 50,000+ transactional records.",
-    heroEyebrow: "Data Analyst · Aspiring Data Scientist",
-    summary: "Data Analyst with internship experience using SQL, Excel, and Power BI to analyze sales and transactional data. Worked with 50K+ sales records, performing data cleaning, SQL analysis, KPI calculations, Pivot Table analysis, and dashboard development. Strong foundation in Python, MySQL, data visualization, and statistics, with a long-term focus on Data Science.",
+    title: "Data Analyst · Aspiring Data Engineer & Scientist",
+    tagline: "I turn complex raw data into clear business decisions — leveraging SQL, Python, Power BI, Excel & Data Pipelines to uncover stories across 50,000+ transactional records.",
+    heroEyebrow: "Data Analyst · Aspiring Data Engineer",
+    summary: "Data Analyst & Aspiring Data Engineer with internship experience using SQL, MySQL, Excel, and Power BI to analyze, model, and pipeline sales and transactional data. Worked with 50K+ sales records, performing data cleaning, query optimization, ETL processes, KPI calculations, and dashboard development. Strong foundation in Python, database architecture, relational modeling, and statistics.",
     youtubeChannel: {
       name: "Hinglish Tech & Data Education",
       subscribers: "Community Educator",
@@ -79,7 +79,7 @@ export const portfolioData = {
       cgpa: "7.5 / 10",
       honours: "Next Gen Data Science",
       minor: "Computer Science",
-      ambition: "Long-term focus on Data Science and Machine Learning."
+      ambition: "Long-term focus on Data Engineering, Data Science, and Machine Learning."
     },
     resumePdf: "https://drive.google.com/file/d/1MNI1BkXowYHAlMc-sHbyCrF15X9AmFDJ/view?usp=drive_link",
     contact: {
@@ -102,39 +102,39 @@ export const portfolioData = {
   ] as Metric[],
 
   skillsPillars: [
-    { name: "SQL & MySQL", desc: "Complex queries, aggregations, joins, date/time logic on 50K+ row datasets.", path: "#what-i-do" },
-    { name: "Power BI & Excel", desc: "Interactive dashboards, DAX measures, Pivot Tables & executive KPI views.", path: "#what-i-do" },
+    { name: "SQL & Data Engineering", desc: "Complex queries, ETL pipelines, schema design, query optimization & database indexing.", path: "#what-i-do" },
+    { name: "Power BI & Excel", desc: "Interactive dashboards, DAX measures, Pivot Tables & executive KPI modeling.", path: "#what-i-do" },
     { name: "Python & Analytics", desc: "Pandas, NumPy, Matplotlib, Seaborn, exploratory data analysis & statistical inference.", path: "#what-i-do" },
   ],
 
   skills: [
     {
-      category: "Programming",
+      category: "Programming & Pipelines",
       primary: ["Python"],
-      supporting: ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
+      supporting: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Data Cleaning"],
       level: 90,
-      description: "Data manipulation, arrays, exploratory data analysis, and statistical visualization."
+      description: "Data manipulation, automated transformation scripts, exploratory data analysis, and statistical visualization."
     },
     {
-      category: "SQL & Databases",
-      primary: ["MySQL"],
-      supporting: ["Joins", "Subqueries", "Aggregations", "GROUP BY", "Filtering", "Indexing", "Date & Time Functions"],
+      category: "SQL & Data Engineering",
+      primary: ["MySQL", "Data Pipelines"],
+      supporting: ["Joins", "Subqueries", "Aggregations", "ETL Fundamentals", "Indexing", "Schema Design", "Date & Time Functions"],
       level: 95,
-      description: "Complex relational queries, temporal aggregations, subqueries, and database performance indexing."
+      description: "Complex relational queries, temporal aggregations, ETL transformations, subqueries, and database performance indexing."
     },
     {
-      category: "BI & Tools",
+      category: "BI & Modeling",
       primary: ["Power BI", "Excel"],
-      supporting: ["DAX", "Data Modeling", "Dashboard Development", "Pivot Tables", "Lookup Functions", "Data Cleaning"],
+      supporting: ["DAX", "Data Modeling", "Dashboard Development", "Pivot Tables", "Lookup Functions", "Data Sanitization"],
       level: 92,
       description: "Interactive executive dashboards, custom DAX measures, relational modeling, and advanced spreadsheet analytics."
     },
     {
-      category: "Statistics",
+      category: "Statistics & ML",
       primary: ["Statistical Analysis"],
-      supporting: ["Descriptive Statistics", "Probability", "Hypothesis Testing", "Correlation Analysis"],
+      supporting: ["Descriptive Statistics", "Probability", "Hypothesis Testing", "Correlation Analysis", "Machine Learning"],
       level: 88,
-      description: "Distribution evaluation, variance estimation, significance testing, and variable correlation."
+      description: "Distribution evaluation, variance estimation, significance testing, and predictive variable correlation."
     }
   ] as SkillCategory[],
 
@@ -174,7 +174,7 @@ export const portfolioData = {
       title: "Pizza Sales Performance Analysis",
       tools: "MySQL + Excel",
       datasetSize: "50,000+ Records",
-      description: "Comprehensive end-to-end analysis of a 50K+ record pizza sales dataset to derive executive sales metrics and transactional insights.",
+      description: "Comprehensive end-to-end analysis of a 50K+ record pizza sales dataset to derive executive sales metrics, data modeling, and transactional insights.",
       githubLink: "https://github.com/devanshsoni1094-lang/pizza-sales-data-analysis",
       calculatedMetrics: [
         "Total Revenue",

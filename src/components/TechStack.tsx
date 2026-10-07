@@ -177,6 +177,27 @@ const generateDataAnalystTextures = (): THREE.CanvasTexture[] => {
         ctx.fill();
       });
     }),
+
+    // 9. Data Engineering Logo
+    createTechTexture("Data Engineering", "#0F172A", (ctx) => {
+      // Pipeline Data Flow Nodes & Gears
+      ctx.fillStyle = "#38BDF8";
+      ctx.fillRect(130, 200, 60, 60);
+      ctx.fillStyle = "#0284C7";
+      ctx.fillRect(226, 200, 60, 60);
+      ctx.fillStyle = "#F59E0B";
+      ctx.fillRect(322, 200, 60, 60);
+
+      // Pipeline flow line
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.7)";
+      ctx.lineWidth = 8;
+      ctx.beginPath();
+      ctx.moveTo(190, 230);
+      ctx.lineTo(226, 230);
+      ctx.moveTo(286, 230);
+      ctx.lineTo(322, 230);
+      ctx.stroke();
+    }),
   ];
 };
 

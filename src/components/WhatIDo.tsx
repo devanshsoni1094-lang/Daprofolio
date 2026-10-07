@@ -91,18 +91,19 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>ANALYZE & SQL</h3>
-              <h4>Data Analysis & MySQL Databases</h4>
+              <h3>SQL & ENGINEERING</h3>
+              <h4>Data Engineering & MySQL Architecture</h4>
               <p>
-                Extracting actionable business insights from 50K+ transactional records using MySQL queries, aggregations, joins, date-time functions, and performance indexing.
+                Building structured database schemas, optimizing complex SQL queries, managing ETL data cleaning workflows, and modeling 50K+ transactional records with performance indexing.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">MySQL</div>
                 <div className="what-tags">SQL Joins</div>
                 <div className="what-tags">Subqueries</div>
-                <div className="what-tags">Aggregations</div>
-                <div className="what-tags">Date & Time Functions</div>
+                <div className="what-tags">ETL Pipelines</div>
+                <div className="what-tags">Schema Design</div>
+                <div className="what-tags">Query Optimization</div>
                 <div className="what-tags">Indexing</div>
                 <div className="what-tags">MongoDB</div>
               </div>
