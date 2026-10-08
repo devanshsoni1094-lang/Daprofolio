@@ -177,6 +177,7 @@ export const portfolioData = {
       datasetSize: "Live Web Application",
       description: "Modern web application platform featuring high-performance data workflows, interactive analytics, and AI-driven user interfaces.",
       liveLink: "https://nuronova.vercel.app",
+      githubLink: "https://github.com/devanshsoni1094-lang/pizza-sales-performance-analytics",
       calculatedMetrics: [
         "AI Workflows",
         "Interactive Analytics",
@@ -202,7 +203,8 @@ export const portfolioData = {
       tools: "MySQL + Excel",
       datasetSize: "50,000+ Records",
       description: "Comprehensive end-to-end analysis of a 50K+ record pizza sales dataset to derive executive sales metrics, data modeling, and transactional insights.",
-      githubLink: "https://github.com/devanshsoni1094-lang/pizza-sales-data-analysis",
+      liveLink: "https://pizza-sales-performance-analytics.vercel.app/",
+      githubLink: "https://github.com/devanshsoni1094-lang/pizza-sales-performance-analytics",
       calculatedMetrics: [
         "Total Revenue",
         "Total Orders",

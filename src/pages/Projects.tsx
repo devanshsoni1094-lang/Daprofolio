@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { portfolioData, ProjectData } from "../data/portfolioData";
 import { GlassesIcon } from "../components/GlassesIcon";
-import { Sparkles, X, ChevronRight } from "lucide-react";
+import { Sparkles, X, ChevronRight, ExternalLink } from "lucide-react";
+import { FaGithub, FaGlobe } from "react-icons/fa6";
 
 export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
@@ -62,14 +63,40 @@ export const Projects: React.FC = () => {
               </div>
             </div>
 
-            {/* Action Button */}
-            <div className="pt-4 border-t-2 border-darkText flex items-center justify-between">
-              <span className="text-xs font-mono font-bold text-darkText/70">{proj.datasetSize}</span>
+            {/* Action Buttons */}
+            <div className="pt-4 border-t-2 border-darkText flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-2 flex-wrap">
+                {proj.liveLink && (
+                  <a
+                    href={proj.liveLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-extrabold font-heading text-darkText bg-sunflower hover:bg-sunflower/80 rounded-xl border-2 border-darkText shadow-[2px_2px_0px_#1A1A1A] transition-all"
+                  >
+                    <FaGlobe className="w-3.5 h-3.5" />
+                    <span>Live View</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                )}
+                {proj.githubLink && (
+                  <a
+                    href={proj.githubLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-extrabold font-heading text-white bg-darkText hover:bg-darkText/90 rounded-xl border-2 border-darkText shadow-[2px_2px_0px_#1A1A1A] transition-all"
+                  >
+                    <FaGithub className="w-3.5 h-3.5" />
+                    <span>GitHub</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                )}
+              </div>
+
               <button
                 onClick={() => setSelectedProject(proj)}
-                className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-extrabold font-heading text-white bg-crimson hover:bg-crimson-hover rounded-xl border-2 border-darkText shadow-[3px_3px_0px_#1A1A1A] transition-all"
+                className="inline-flex items-center gap-2 px-4 py-2 text-xs font-extrabold font-heading text-white bg-crimson hover:bg-crimson-hover rounded-xl border-2 border-darkText shadow-[2px_2px_0px_#1A1A1A] transition-all"
               >
-                <span>View Full Case Study</span>
+                <span>Case Study</span>
                 <ChevronRight className="w-4 h-4" />
               </button>
             </div>
@@ -160,7 +187,34 @@ export const Projects: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-2 flex justify-end">
+            <div className="pt-2 flex items-center justify-between flex-wrap gap-3 border-t-2 border-darkText">
+              <div className="flex items-center gap-2 flex-wrap">
+                {selectedProject.liveLink && (
+                  <a
+                    href={selectedProject.liveLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-extrabold font-heading text-darkText bg-sunflower hover:bg-sunflower/80 rounded-xl border-2 border-darkText shadow-[2px_2px_0px_#1A1A1A] transition-all"
+                  >
+                    <FaGlobe className="w-4 h-4" />
+                    <span>Live View</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
+                {selectedProject.githubLink && (
+                  <a
+                    href={selectedProject.githubLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-extrabold font-heading text-white bg-darkText hover:bg-darkText/90 rounded-xl border-2 border-darkText shadow-[2px_2px_0px_#1A1A1A] transition-all"
+                  >
+                    <FaGithub className="w-4 h-4" />
+                    <span>GitHub Repository</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
+              </div>
+
               <button
                 onClick={() => setSelectedProject(null)}
                 className="px-6 py-2.5 text-xs font-extrabold font-heading text-white bg-crimson rounded-xl border-2 border-darkText shadow-[3px_3px_0px_#1A1A1A]"

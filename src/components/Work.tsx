@@ -13,17 +13,10 @@ const Work = () => {
 
         <div className="work-projects-grid">
           {portfolioData.projects.map((project) => {
-            const projectUrl = project.liveLink || project.githubLink || "#";
             const isLive = Boolean(project.liveLink);
 
             return (
-              <a
-                key={project.id}
-                href={projectUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="work-single-card"
-              >
+              <div key={project.id} className="work-single-card">
                 <div className="work-single-header">
                   <span className="work-badge">
                     {isLive ? "🚀 Live Web Platform" : "📊 Featured Data Project"}
@@ -35,7 +28,19 @@ const Work = () => {
 
                 <div className="work-single-title">
                   <h3>{project.title}</h3>
-                  <MdArrowOutward className="work-arrow-icon" />
+                  <div style={{ display: "flex", gap: "8px" }}>
+                    {project.liveLink && (
+                      <a
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        title="Live View"
+                        style={{ color: "inherit", textDecoration: "none" }}
+                      >
+                        <MdArrowOutward className="work-arrow-icon" />
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 <p className="work-single-desc">{project.description}</p>
@@ -57,18 +62,31 @@ const Work = () => {
                   </ul>
                 </div>
 
-                <div className="work-card-footer">
-                  {isLive ? (
-                    <span className="work-github-button work-live-button">
-                      <FaGlobe /> Visit nuronova.vercel.app <MdArrowOutward />
-                    </span>
-                  ) : (
-                    <span className="work-github-button">
-                      <FaGithub /> View Project on GitHub <MdArrowOutward />
-                    </span>
+                <div className="work-card-footer" style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "15px" }}>
+                  {project.liveLink && (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="work-github-button work-live-button"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <FaGlobe /> Live View <MdArrowOutward />
+                    </a>
+                  )}
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="work-github-button"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <FaGithub /> GitHub Repository <MdArrowOutward />
+                    </a>
                   )}
                 </div>
-              </a>
+              </div>
             );
           })}
         </div>
