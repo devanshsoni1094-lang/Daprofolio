@@ -177,7 +177,7 @@ export const portfolioData = {
       datasetSize: "Live Web Application",
       description: "Modern web application platform featuring high-performance data workflows, interactive analytics, and AI-driven user interfaces.",
       liveLink: "https://nuronova.vercel.app",
-      githubLink: "https://github.com/devanshsoni1094-lang/pizza-sales-performance-analytics",
+      githubLink: "https://github.com/devanshsoni1094-lang/Nuronova-Assesment-Project",
       calculatedMetrics: [
         "AI Workflows",
         "Interactive Analytics",
